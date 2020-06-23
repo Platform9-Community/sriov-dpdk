@@ -1,0 +1,13 @@
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: sriov-dpdk-net-1
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: intel.com/intel_sriov_dpdk
+spec:
+  config: '{
+    "type": "sriov",
+    "cniVersion": "0.3.1",
+    "deviceId": "0000:03:10.0"
+  }'
+
